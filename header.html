@@ -1,0 +1,94 @@
+
+
+<header class="head ">
+    <div class="headOuter row">
+          <div class="topMenu">
+                <ul class="snsBox"> 
+                    <li><a href="#"><i class="fab fa-instagram"></i><span class="blind">인스타그램</span></a></li>
+                    <li><a href="#"><i class="fab fa-facebook-f"></i><span class="blind">페이스북</span></a></li>
+                    <li><a href="#"><i class="fab fa-blogger-b"></i><span class="blind">블로그</span></a></li>
+                    <li><a href="#"><i class="fas fa-sms"></i><span class="blind">카키오톡</span></a></li>
+                </ul>
+                <ul class="loginBox">
+                    <li><a href="#">정기구독</a></li>
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">회원가입</a></li>
+                </ul>
+          </div>
+
+            <div  class="logo">
+                <h2><a href="index.html"><img src="img/logo.png" alt="로고"></a></h2>
+            </div>
+            <ul class="mainMenu">
+                <li class="openNav"><a href="#"><i class="fas fa-bars"></i><span class="blind">메뉴열기</span></a></li>
+                <li><a href="#">FILM</a></li>
+                <li><a href="#">FEATURE</a></li>
+                <li><a href="#">FASHION</a></li>
+                <li><a href="#">INTERVIEW</a></li>
+                <li><a href="#">CAR</a></li>
+            </ul>
+
+            <div class="subMenuBox">
+              <div class="closeNav">
+                  <a href="#"><i class="fas fa-times"></i><span class="blind">메뉴닫기</span></a>
+              </div>
+                  <ul class="subMenu">
+                      <li><a href="faq.html">서브메뉴1</a></li>
+                      <li><a href="#">서브메뉴2</a></li>
+                      <li><a href="#">서브메뉴3</a></li>
+                      <li><a href="#">서브메뉴4</a></li>
+                      <li><a href="#">서브메뉴5</a></li>
+                      <li><a href="#">서브메뉴6</a></li>
+                  </ul>
+          </div>
+
+    </div>
+</header>
+<script>
+     $('.openNav').on('click', function () {
+    $('.subMenuBox').css({
+      display: 'block'
+    })
+    $('.subMenuBox').animate({
+      left: '0px'
+    }, 500)
+  })
+  $('.closeNav').on('click', function () {
+    $('.subMenuBox').animate({
+      left: '-400px'
+    }, 500, function () {
+      $('.subMenuBox').css({
+        display: 'none'
+      })
+    })
+  });
+
+  var sflag = true;
+    $(window).on('scroll', function () {
+        var scollSize = $(document).height() - $('.head').height() - $(window).height();
+        var sct = $(this).scrollTop();
+        var wid = (sct / scollSize) * 100 + '%';
+
+        // 스크롤탑값에 따라 헤더구역 고정시키기
+        if (sct >= 100 && sflag) {
+          $('.head').css({
+            background: '#fffff9'
+          }).stop().animate({
+            height:'100px'
+          },200)
+          $('.logo').css({display: 'none'},500)
+            sflag = false;
+        } else if (sct === 0 && !sflag) {
+          $('.head').css({
+            background:'#fff'
+          }).stop().animate({
+            height:'200px'
+          },200)
+          $('.logo').css({display:'block'},500)
+         
+            sflag = true
+        }
+    });
+
+
+</script>

@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+.faq_Title{text-align: center;}
+.faq_Title h2 {
+    font-size: 30px; margin-top: 10px;
+     color: #ff7676;
+}
+.faq_List .Q {
+    margin: 10px; border: 1px solid #ddd; 
+    font-size: 20px; font-weight: bold;
+    padding: 10px; border-radius:50px ;
+}
+.faq_List .A {
+    margin: 0 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+}

@@ -1,0 +1,101 @@
+@charset "utf-8";
+.row {width: 1050px; margin: 0 auto;}
+
+.loadingAni { position:fixed; top:0; left:0; right:0; bottom:0; 
+  background:#000; color:#fff; font-size:80px; z-index:999999999999 }
+.loadingAni i{  position:absolute;  top:50%; left:50%; 
+  transform:translate(-50%, -50%) }
+
+
+/* CONTAINER 시작 */
+/* 슬라이드 박스 */
+#container {margin-top: 200px;}
+.main_rolling  .slide {  background-repeat:no-repeat;
+background-size:cover; height:550px;  
+background-position:center; position:relative }
+.main_rolling  .slide1 { 
+  background-image:url(../img/silde1.jpg); }
+.main_rolling .slide2 { 
+  background-image:url(../img/slide2.jpg); }
+.main_rolling .slide3 { 
+  background-image:url(../img/slide3.jpg); }
+.main_rolling  .slide  .text {
+  position:absolute; top:50%; left:50%; 
+  transform:translate(-50%, -50%); 
+  color:#fff;  text-align:center; 
+}
+.main_rolling .slide .text  p:nth-child(1) { font-size:45px;
+   letter-spacing:0px; text-shadow:2px 2px 5px #555; 
+   padding-bottom:10px  }
+.main_rolling .slide .text  p:nth-child(2) { font-size:20px;
+  letter-spacing:6px; margin-top:20px  }
+/* .slide2,  .slide3 { display:none } */
+.main_rolling  .slide.slick-active .text p:nth-child(1) {  animation:bounce  1s  both  0.5s  }
+.main_rolling  .slide.slick-active .text p:nth-child(2) {  animation:bounceInUp  1s  both  1s }
+
+.main_rolling { position:relative }
+.main_rolling .marrow  { position:absolute; top:50%; transform:translateY(-50%);
+    background:none; border:none; font-size:80px; color:#fff; }
+.main_rolling .prevArrow  { left:20px; z-index:99}
+.main_rolling .nextArrow { right:20px }
+
+/* 번호버튼 타입1 */
+/* .main_rolling_pc  .slick-dots { position:absolute; bottom:20px; width:calc(50% + 30px); text-align:right  }
+.main_rolling_pc  .slick-dots  li  {  display:inline-block  }
+.main_rolling_pc  .slick-dots  li  button { width:15px; height:15px; background:#fff; 
+  border:none;  text-indent:-9999px; overflow:hidden; border-radius:50%;
+  margin:0 5px; }
+.main_rolling_pc  .slick-dots   li.slick-active  button { width:40px; border-radius:50px }   */
+
+/* 번호버튼 애니메이션 타입 */
+.main_rolling .slick-dots { position:absolute; bottom:20px; width:60%; text-align:right  }
+.main_rolling .slick-dots  li  {  display:inline-block; 
+    width:114px; height:2px; background:#fff; margin:0 5px; position:relative
+}
+.main_rolling .slick-dots li button { width:0px; height:2px; background:#f26d90; 
+  border:none;  text-indent:-9999px; overflow:hidden; border-radius:1px;
+  position:absolute; top:0; left:0; 
+  }
+.main_rolling .slick-dots li.slick-active button {  animation:lineani  5s  both } 
+@keyframes  lineani {
+      0% { width:0px }
+      100% { width:100%; }
+}
+
+.main_rolling .plpa { position:absolute; bottom:18px; background:none; border:none; 
+  font-size:15px; color:#fff; right:0; width:40%; 
+  text-align:left; padding-left:10px; }
+
+.article1 h2{
+  margin-top: 15px;
+ font-size: 30px;
+ border-bottom:3px solid #f26d90;
+}
+.article1Box {margin-top:20px ; display: flex; justify-content: center;}
+.art1Inner { width: 33.33%; margin:10px 20px;}
+.art1Inner img {width:100% ; height: 200px;}
+.art1Inner h3 {margin-top: 10px; font-size: 20px;}
+.art1Inner p{margin-top: 10px; }
+
+
+.article3 h2{
+  margin-top: 15px;
+ font-size: 30px;
+ border-bottom:3px solid #f26d90;
+}
+.art3Inner a {display:flex ; flex: 1 1; padding:10px ;}
+.art3Inner a .text {padding-left: 10px;}
+.article3Box .art3Inner{display: none;}
+.article3Box .art3Inner:nth-child(1),
+.article3Box .art3Inner:nth-child(2), 
+.article3Box .art3Inner:nth-child(3){ display: block;} 
+
+.art3Inner img {width:30% ; height:100%;}
+.art3Inner h3 {margin-top: 10px; font-size: 20px;}
+
+.lord {
+  display: flex; justify-content: center; 
+  margin-top: 20px; padding: 10px; font-size: 30px; 
+  border: 2px solid #f26d90; outline: none; cursor: pointer;
+
+}

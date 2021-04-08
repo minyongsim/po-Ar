@@ -1,0 +1,104 @@
+@charset "utf-8";
+.headOuter{position: relative;}
+.head {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999999;
+    background: #fff;
+    padding-top: 10px;;
+}
+
+.topMenu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.topMenu ul li:hover {
+    color: #ff0000;
+}
+
+.snsBox {
+    display: flex;
+}
+
+.snsBox li {
+    margin: 0 10px;
+}
+
+.loginBox {
+    display: flex;
+}
+
+.loginBox li {
+    margin: 0 10px;
+    font-size: 13px;
+}
+
+.logo {
+   text-align: center;
+   margin:20px 0;
+}
+
+.logo img {
+    width: 300px;
+}
+
+.subMenuBox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    z-index: 999;
+    display: none;
+    background: rgba(0,0,0,0.5);
+}
+
+.closeNav a {
+    background: #333;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 300px;
+    padding: 10px 20px;
+    font-size: 40px;
+    z-index: 99999;
+}
+.closeNav a:hover{color: #ff0000;}
+
+.subMenu {
+    width: 300px;
+    height: 100%;
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 50px;
+}
+
+.subMenu li {
+    padding: 10px;
+    border-bottom: 2px solid #fff;
+    transition: all 0.2s;
+    
+}
+
+.subMenu li:hover {
+    transform: scale(1.5);
+    color: #ff0000;
+    font-weight: bolder;
+}
+
+.mainMenu {
+    margin: 20px 0px;
+    display: flex;
+    justify-content: center;
+}
+.mainMenu li {
+    margin: 0 30px;
+    font-size: 25px;
+    font-weight: bold;
+}
+.mainMenu li a:hover {border-bottom:1px solid #333;}
